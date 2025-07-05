@@ -21,7 +21,7 @@ public class OCETeamCodeTeleop extends LinearOpMode {
     private DcMotor frontRightDrive = null;
     private DcMotor backRightDrive = null;
 
-    private DcMotor armMotor = null
+    private DcMotor armMotor = null;
 
     //Time Control Variables
     public int tick = 0;
