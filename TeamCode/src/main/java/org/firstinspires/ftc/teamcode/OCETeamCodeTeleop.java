@@ -22,10 +22,10 @@ public class OCETeamCodeTeleop extends LinearOpMode {
     private DcMotor backRightDrive = null;
 
     //Time Control Variables
-    public int tick = 0;3
+    public int tick = 0;
 
     @Override
-    public void runOpMode() {
+    public void runOpMode() {.
 
         // Initialize the hardware variables. Note that the strings used here must correspond
         // to the names assigned during the robot configuration step on the DS or RC devices.
