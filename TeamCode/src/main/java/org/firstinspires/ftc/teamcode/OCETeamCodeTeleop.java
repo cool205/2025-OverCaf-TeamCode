@@ -123,10 +123,9 @@ public class OCETeamCodeTeleop extends LinearOpMode {
             //Change Tick
             tick += 1;
 
-            // Show the elapsed game time and wheel power.
+            // Telemetry
             telemetry.addData("Status", "Run Time: " + runtime.toString());
-            telemetry.addData("Front left/Right", "%4.2f, %4.2f", frontLeftPower, frontRightPower);
-            telemetry.addData("Back  left/Right", "%4.2f, %4.2f", backLeftPower, backRightPower);
+            telemetry.addData("Ticks", "%4.2f", tick);
             telemetry.update();
         }
     }}
