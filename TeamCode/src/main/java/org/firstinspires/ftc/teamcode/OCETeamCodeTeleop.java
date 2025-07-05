@@ -21,6 +21,9 @@ public class OCETeamCodeTeleop extends LinearOpMode {
     private DcMotor frontRightDrive = null;
     private DcMotor backRightDrive = null;
 
+    //Time Control Variables
+    public int tick = 0;3
+
     @Override
     public void runOpMode() {
 
@@ -115,6 +118,10 @@ public class OCETeamCodeTeleop extends LinearOpMode {
             frontRightDrive.setPower(frontRightPower);
             backLeftDrive.setPower(backLeftPower);
             backRightDrive.setPower(backRightPower);
+
+
+            //Change Tick
+            tick += 1;
 
             // Show the elapsed game time and wheel power.
             telemetry.addData("Status", "Run Time: " + runtime.toString());
