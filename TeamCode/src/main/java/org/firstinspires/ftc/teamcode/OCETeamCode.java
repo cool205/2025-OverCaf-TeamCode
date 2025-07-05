@@ -80,7 +80,7 @@ public class OCETeamCode extends LinearOpMode {
             double backLeftPower   = axial - lateral + yaw;
             double backRightPower  = axial + lateral - yaw;
 
-            // Normalize the values so no wheel power exceeds 100%
+            // Normalize the values so no wheel power exceeds limit
             // This ensures that the robot maintains the desired motion.
             max = Math.max(Math.abs(frontLeftPower), Math.abs(frontRightPower));
             max = Math.max(max, Math.abs(backLeftPower));
