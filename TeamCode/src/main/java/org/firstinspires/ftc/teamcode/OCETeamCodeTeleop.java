@@ -21,8 +21,11 @@ public class OCETeamCodeTeleop extends LinearOpMode {
     private DcMotor frontRightDrive = null;
     private DcMotor backRightDrive = null;
 
+    private DcMotor armMotor = null
+
     //Time Control Variables
     public int tick = 0;
+    public int armTicksPerDegree = 0; // change this number
 
     @Override
     public void runOpMode() {
@@ -33,7 +36,7 @@ public class OCETeamCodeTeleop extends LinearOpMode {
         backLeftDrive = hardwareMap.get(DcMotor.class, "back_left_drive");
         frontRightDrive = hardwareMap.get(DcMotor.class, "front_right_drive");
         backRightDrive = hardwareMap.get(DcMotor.class, "back_right_drive");
-
+        armMotor = hardwareMap.get(DcMotor.class, "armMotor");
         // ########################################################################################
         // !!!            IMPORTANT Drive Information. Test your motor directions.            !!!!!
         // ########################################################################################
@@ -65,6 +68,14 @@ public class OCETeamCodeTeleop extends LinearOpMode {
             double axial   = -gamepad1.left_stick_y;  // Note: pushing stick forward gives negative value
             double yaw     =  gamepad1.right_stick_x;
             double lateral = 0;
+
+            //Arm Controls
+            if(gamepad2.y){
+                armMotor.setTargetPosition(100*armTicksPerDegree);
+            }
+
+
+
             // Inclusive of both strafing methods
             if (gamepad1.left_stick_x == 0){
                 if (gamepad1.left_trigger>0){
