@@ -20,7 +20,6 @@ public class OCETeamCodeTeleop extends LinearOpMode {
     private DcMotor backLeftDrive = null;
     private DcMotor frontRightDrive = null;
     private DcMotor backRightDrive = null;
-
     private DcMotor armMotor = null;
 
     //Time Control Variables
@@ -72,8 +71,9 @@ public class OCETeamCodeTeleop extends LinearOpMode {
             //Arm Controls
             if(gamepad2.y){
                 armMotor.setTargetPosition(100*armTicksPerDegree);
+            } else if (gamepad2.a){
+                armMotor.setTargetPosition(20*armTicksPerDegree);
             }
-
 
 
             // Inclusive of both strafing methods
@@ -84,7 +84,7 @@ public class OCETeamCodeTeleop extends LinearOpMode {
                     lateral = gamepad1.right_trigger;
                 }
             } else {
-                lateral =  gamepad1.left_stick_x;
+                lateral = gamepad1.left_stick_x;
             }
 
             // Combine the joystick requests for each axis-motion to determine each wheel's power.
