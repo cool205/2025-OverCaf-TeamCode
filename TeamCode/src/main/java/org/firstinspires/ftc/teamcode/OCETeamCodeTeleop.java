@@ -12,7 +12,7 @@ import com.qualcomm.robotcore.util.ElapsedTime;
 @TeleOp(name="Mecanum Drive Basic Code", group="Linear OpMode")
 //Comment out @Disabled to put it into Driver Station OPMode List
 @Disabled
-public class OCETeamCode extends LinearOpMode {
+public class OCETeamCodeTeleop extends LinearOpMode {
 
     // Declare OpMode members for each of the 4 motors.
     private ElapsedTime runtime = new ElapsedTime();
