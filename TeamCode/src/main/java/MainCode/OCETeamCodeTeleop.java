@@ -2,9 +2,9 @@
 
 /*Comfirm your branch has updated here
 -------------------------------------
-confirmed
-ttung is the kingggg!!!!!!
-akch711 < ttung
+
+
+
 ttung was never here
 -------------------------------------
  */
