@@ -1,8 +1,8 @@
 //Wilson testing branches
-//AkCh711 test
-/*Comfirm your branch has updated here
--------------------------------------
 
+/*Confirm your branch has updated here
+-------------------------------------
+//AkCh711 is confirmed
 
 
 
