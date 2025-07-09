@@ -1,22 +1,4 @@
-//Wilson testing branches
-
-/*Comfirm your branch has updated here
--------------------------------------
-
-
-
-ttung was never here
--------------------------------------
- */
-
-//Wilson has entered the lobby
-//dhruvs here
-//Dhruv has entered the lobby
-//LEBROOOOON
-//AkCh711 was here
-//TTung is KING!!!!!
 package MainCode;
-//AkCh711 Is Here Today!
 import com.qualcomm.robotcore.eventloop.opmode.Disabled;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
