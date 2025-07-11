@@ -57,7 +57,7 @@ public class OCETeamCodeTeleop extends LinearOpMode {
         // run until the end of the match (driver presses STOP)
         while (opModeIsActive()) {
             double max;
-            double limit = 1.0;
+            double limit;
 
             // POV Mode uses left joystick to go forward & strafe, and right joystick to rotate.
             double axial   = -gamepad1.left_stick_y;  // Note: pushing stick forward gives negative value
@@ -81,6 +81,15 @@ public class OCETeamCodeTeleop extends LinearOpMode {
                 }
             } else {
                 lateral = gamepad1.left_stick_x;
+            }
+
+            //limit changing
+            if(gamepad1.left_bumper){
+                limit = 0.6;
+            } else if (gamepad1.right_bumper){
+                limit = 1.0;
+            } else {
+                limit = 0.8;
             }
 
             // Combine the joystick requests for each axis-motion to determine each wheel's power.
