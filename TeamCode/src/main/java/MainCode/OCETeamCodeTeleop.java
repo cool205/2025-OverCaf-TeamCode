@@ -73,7 +73,7 @@ public class OCETeamCodeTeleop extends LinearOpMode {
         while (opModeIsActive()) {
             double max;
             double limit = 1.0;
-
+            double speedFactor;
             // POV Mode uses left joystick to go forward & strafe, and right joystick to rotate.
             double axial   = -gamepad1.left_stick_y;  // Note: pushing stick forward gives negative value
             double yaw     =  gamepad1.right_stick_x;
@@ -136,10 +136,21 @@ public class OCETeamCodeTeleop extends LinearOpMode {
             */
 
             // Send calculated power to wheels
-            frontLeftDrive.setPower(frontLeftPower);
-            frontRightDrive.setPower(frontRightPower);
-            backLeftDrive.setPower(backLeftPower);
-            backRightDrive.setPower(backRightPower);
+
+            if (gamepad1.right_trigger == 1) {
+                speedFactor = 1;
+            }
+            else if(gamepad1.left_trigger == 1) {
+                speedFactor = 0.75;
+            }
+            else {
+                speedFactor = 0.5;
+            }
+
+            frontLeftDrive.setPower(frontLeftPower * speedFactor);
+            frontRightDrive.setPower(frontRightPower * speedFactor);
+            backLeftDrive.setPower(backLeftPower * speedFactor);
+            backRightDrive.setPower(backRightPower * speedFactor);
 
 
             //Change Tick
