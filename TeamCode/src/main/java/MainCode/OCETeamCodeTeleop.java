@@ -5,9 +5,9 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.util.ElapsedTime;
-@TeleOp(name="Teleop Code", group="Linear OpMode")
+@TeleOp(name="OCETeamCodeTeleop", group="Linear OpMode")
 //Comment out @Disabled to put it into Driver Station OPMode List
-@Disabled
+//@Disabled
 public class OCETeamCodeTeleop extends LinearOpMode {
 
     // Declare OpMode members for each of the 4 motors.
