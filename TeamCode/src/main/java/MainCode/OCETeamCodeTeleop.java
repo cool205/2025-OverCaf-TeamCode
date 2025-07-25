@@ -125,7 +125,6 @@ public class OCETeamCodeTeleop extends LinearOpMode {
 
             // Telemetry
             telemetry.addData("Status", "Run Time: " + runtime.toString());
-            telemetry.addData("Ticks", "%4.2f", tick);
             telemetry.update();
         }
     }}
