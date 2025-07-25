@@ -1,7 +1,3 @@
-//Wilson has entered the lobby
-//dhruvs here
-//AkCh711 was here
-//TTung is KING!!!!!
 package MainCode;
 //AkCh711 Was Here Today!
 import com.qualcomm.robotcore.eventloop.opmode.Disabled;
@@ -31,10 +27,10 @@ public class OCETeamCodeTeleop extends LinearOpMode {
 
         // Initialize the hardware variables. Note that the strings used here must correspond
         // to the names assigned during the robot configuration step on the DS or RC devices.
-        frontLeftDrive = hardwareMap.get(DcMotor.class, "front_left_drive");
-        backLeftDrive = hardwareMap.get(DcMotor.class, "back_left_drive");
-        frontRightDrive = hardwareMap.get(DcMotor.class, "front_right_drive");
-        backRightDrive = hardwareMap.get(DcMotor.class, "back_right_drive");
+        frontLeftDrive = hardwareMap.get(DcMotor.class, "frontLeftMotor");
+        backLeftDrive = hardwareMap.get(DcMotor.class, "backLeftMotor");
+        frontRightDrive = hardwareMap.get(DcMotor.class, "frontRightMotor");
+        backRightDrive = hardwareMap.get(DcMotor.class, "backRightMotor");
         armMotor = hardwareMap.get(DcMotor.class, "armMotor");
         // ########################################################################################
         // !!!            IMPORTANT Drive Information. Test your motor directions.            !!!!!
