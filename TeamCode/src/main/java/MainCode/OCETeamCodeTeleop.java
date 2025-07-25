@@ -19,8 +19,8 @@ public class OCETeamCodeTeleop extends LinearOpMode {
     private DcMotor armMotor = null;
 
     //Time Control Variables
-    public int tick = 0;
-    public int armTicksPerDegree = 0; // change this number
+    public double tick = 0;
+    public double armTicksPerDegree = 0; // change this number
 
     @Override
     public void runOpMode() {
@@ -65,13 +65,6 @@ public class OCETeamCodeTeleop extends LinearOpMode {
             double lateral = 0;
 
             //Arm Controls
-            if(gamepad2.y){
-                armMotor.setTargetPosition(100*armTicksPerDegree);
-            } else if (gamepad2.a){
-                armMotor.setTargetPosition(20*armTicksPerDegree);
-            }
-
-
             // Inclusive of both strafing methods
             if (gamepad1.left_stick_x == 0){
                 if (gamepad1.left_trigger>0){
