@@ -120,11 +120,8 @@ public class OCETeamCodeTeleop extends LinearOpMode {
             backRightDrive.setPower(backRightPower);
 
 
-            //Change Tick
             tick += 1;
 
-            // Telemetry
-            telemetry.addData("Status", "Run Time: " + runtime.toString());
-            telemetry.update();
+
         }
     }}
