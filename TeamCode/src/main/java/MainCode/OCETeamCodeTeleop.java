@@ -47,7 +47,7 @@ public class OCETeamCodeTeleop extends LinearOpMode {
 
         while (opModeIsActive()) {
             double max;
-            double limit = 1.0;
+            double limit = 0.7;
 
             double axial   = -gamepad1.left_stick_y;  // pushing stick forward gives negative value
             double yaw     =  gamepad1.right_stick_x;
