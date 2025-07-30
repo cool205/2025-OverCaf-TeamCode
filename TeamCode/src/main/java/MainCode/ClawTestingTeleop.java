@@ -16,8 +16,8 @@ import org.firstinspires.ftc.robotcore.external.navigation.AngleUnit;
 public class ClawTestingTeleop extends LinearOpMode {
     private Servo claw = null;
 
-    final double CLAW_IN   = 0.44; //0.675
-    final double CLAW_OUT  = 0.2; // 1
+    final double CLAW_IN   = 0.5; //0.675
+    final double CLAW_OUT  = 0.5; // 1
 
     double clawPosition = CLAW_OUT;
 
