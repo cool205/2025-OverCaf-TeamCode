@@ -17,7 +17,7 @@ public class ClawTestingTeleop extends LinearOpMode {
     private Servo claw = null;
 
     final double CLAW_IN   = 0.5; //0.675
-    final double CLAW_OUT  = 0.5; // 1
+    final double CLAW_OUT  = 0.7; // 1
 
     double clawPosition = CLAW_OUT;
 
@@ -28,12 +28,22 @@ public class ClawTestingTeleop extends LinearOpMode {
 
         waitForStart();
 
+        telemetry.addLine("Testing...Testing");
+        telemetry.update();
+
         while (opModeIsActive()){
+            telemetry.addLine("Testing2");
+            telemetry.update();
             if(gamepad1.dpad_up){
+                telemetry.addLine("Gamepad detected");
                 clawPosition = CLAW_IN;
+                claw.setPosition(CLAW_IN);
             } else if(gamepad1.dpad_down){
                 clawPosition = CLAW_OUT;
+                claw.setPosition(CLAW_OUT);
             }
+
+
 
             if(clawPosition == CLAW_IN){
                 claw.setPosition(CLAW_IN);
